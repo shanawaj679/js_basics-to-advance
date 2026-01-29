@@ -11,4 +11,6 @@ console.log(a.startsWith("s"));
 console.log(a.endsWith("m"));
 console.log(a.startsWith(" "));
 console.log(a.endsWith(" "));
+console.log(a.slice(1,7));
+console.log(a.replace("shane","john"));
 
