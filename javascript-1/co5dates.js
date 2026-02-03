@@ -1,0 +1,15 @@
+let a= new Date();
+console.log(a);
+let b=Date();
+console.log(b);
+console.log(a,b,typeof a,typeof b);
+let c= a.getHours();
+console.log(c);
+let d= a.getMinutes();
+console.log(d);
+let e=a.getSeconds();
+console.log(e);
+let r=a.getDate();
+console.log(r);
+let t=a.getYear();
+console.log(t);
