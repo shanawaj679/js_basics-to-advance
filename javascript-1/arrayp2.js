@@ -7,3 +7,6 @@ let hua=a.map(ui=>ui%2);
 console.log(hua);
 let y=a.forEach(bh=> bh*2);
 console.log(y);
+let b=[1,2,3,4,5,6,7,8,90,12,4,,6,,86,2,1,1,,6,7,8,,3,,];
+let c=[...b,...a];
+console.log(c);
