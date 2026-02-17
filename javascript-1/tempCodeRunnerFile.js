@@ -1,0 +1,1 @@
+console.log(a.splice(2,3));
