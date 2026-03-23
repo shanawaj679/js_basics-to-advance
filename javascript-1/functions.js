@@ -22,4 +22,10 @@ setTimeout(() => {
     clearInterval(h);
 }, 3000);
 
+let fun=(x,...y)=>{
+    console.log(x);
+      console.log(y);
+};
+ fun(1,2,3,4,5,6,7,26,8,46,9,10,11,12,13,14,15);
 
+console.log("hola");
