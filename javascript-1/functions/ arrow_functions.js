@@ -1,16 +1,13 @@
 
- let h=setInterval(() => {
-    let o=(c,d)=> c/d;
-    console.log(o(2,4));
-},1000);
- setTimeout(() => {
-    let mul = (a,b)=>a*b;
-console.log(mul(2,3))
-}, 1000);
-setTimeout(() => {
-    clearInterval(h);
-}, 3000);
+let work=()=>{
+    console.log("work is in progress");
+}
+work(); //normal arrow function stored inside a variable
+(()=>{
+    console.log("work is imp.");
+}) (); //self invoking function and also called as iife(immediatly invoked function expression)
 
+ 
 let fun=(x,...y)=>{ 
     //spread operator in functions 
     console.log(x);
