@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analyzer</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        textarea{
+            width: 80%;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        button{
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background: #00adb5;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .box{
+            margin-top: 20px;
+            padding: 15px;
+            background: #222;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🚀 Smart Text Analyzer</h1>
+    <p>Enter text below:</p>
+
+    <textarea id="text" placeholder="Enter your text..." rows="10"></textarea>
+    <br>
+    <button onclick="analyzetext()">Analyze</button>
+
+    <div class="box" id="result"></div>
+
+<script>
+function analyzetext(){
+    const text = document.getElementById("text").value;
+
+    if(text.trim() === ""){
+        document.getElementById("result").innerHTML = "⚠️ Please enter some text";
+        return;
+    }
+
+    const lower = text.toLowerCase();
+    const upper = text.toUpperCase();
+
+    const letters = text.replace(/\s/g, "").length;
+    const words = text.trim().split(/\s+/).length;
+    const sentences = text.split(/[.!?]+/).filter(s => s.trim() !== "").length;
+
+    const readingTime = (words / 125);
+     const letter = text.replace(/\s/g, "");
+    
+
+    document.getElementById("result").innerHTML = `
+        <p><b>Lowercase:</b> ${lower}</p>
+        <p><b>Uppercase:</b> ${upper}</p>
+        <hr>
+        <p>📊 Letters (no spaces): ${letters}</p>
+        <p>📝 Words: ${words}</p>
+        <p>📖 Sentences: ${sentences}</p>
+        <p>⏱️ Reading Time: ${readingTime} minutes</p>
+        <p>${letter}</p>
+ 
+    `;
+}
+</script>
+
+</body>
+</html>

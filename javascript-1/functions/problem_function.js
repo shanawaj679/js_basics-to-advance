@@ -1,0 +1,6 @@
+
+function reverse(str){
+   let reversed=str.trim().split(/\s+/).reverse().join(" ");
+     console.log(`${reversed}`);
+}
+reverse("hello world");
