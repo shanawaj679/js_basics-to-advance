@@ -1,1 +1,1 @@
-console.log(a.splice(2,3));
+https://jsonplaceholder.typicode.com/users
